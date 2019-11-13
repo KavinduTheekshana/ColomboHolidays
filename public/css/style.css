@@ -6047,16 +6047,17 @@ nav li.type-4 .dropmenu .fa-chevron-right {
 }
 
 .qq img {
-    width: 30px;
-    height: 30px;
-    margin-top: -15px;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    border-radius: 100%;
 }
 
 .qq:before {
     content: '';
     position: absolute;
     left: 0px;
-    width: 45%;
+    width: 40%;
     height: 1px;
     background: #fff;
 }
@@ -6065,7 +6066,7 @@ nav li.type-4 .dropmenu .fa-chevron-right {
     content: '';
     position: absolute;
     right: 0px;
-    width: 45%;
+    width: 40%;
     height: 1px;
     background: #fff;
 }
@@ -26310,7 +26311,7 @@ body[data-color="theme-8"] .accordeon-entry h5:after {
     border-radius: 0px;
 }
 
-.vid{
+.vid {
     position: absolute;
     top: 50%;
     left: 50%;

@@ -11,10 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', 'HomaPageController@index')->name('/');
+
+Route::get('ContactUs', 'ContactUsController@index')->name('ContactUs');
 
 Auth::routes();
 
-Route::get('/admin', 'HomeController@index')->name('admin');
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/Dashboard', 'adminController@dashboard')->name('Dashboard');
+
+Route::get('/BeautifulTrips', 'adminController@BeautifulTrips')->name('BeautifulTrips');

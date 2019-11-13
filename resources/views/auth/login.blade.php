@@ -1,73 +1,112 @@
 @extends('layouts.app')
-
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
 
+<body class="bg-white">
+
+    <!-- Log In page -->
+    <div class="row">
+        <div class="col-lg-3 pr-0">
+            <div class="card mb-0 shadow-none">
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                    <h3 class="text-center m-0">
+                        <a href="/" class="logo logo-admin"><img
+                                src="{{URL::asset('admin/images/logo-sm-dark-login.png')}}" height=" 100" alt="logo"
+                                class="my-3"></a>
+                    </h3>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                    <div class="px-3">
+                        <h4 class="text-muted font-18 mb-2 text-center">Welcome !</h4>
+                        <p class="text-muted text-center">Sign in to continue to Colombo Holidays.</p>
 
-                                @error('email')
+                        <form class="form-horizontal my-4" method="POST" action="{{ route('login') }}">
+                            @csrf
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i
+                                                class="far fa-user"></i></span>
+                                    </div>
+                                    <input id="email" type="email"
+                                        class="form-control @error('email') is-invalid @enderror" name="email"
+                                        value="{{ old('email') }}" required autocomplete="email"
+                                        placeholder="Enter username">
+
+                                    @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
-                            </div>
-                        </div>
+                                    @enderror
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
+                            <div class="form-group">
+                                <label for="userpassword">Password</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon2"><i
+                                                class="fa fa-key"></i></span>
+                                    </div>
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
+                                    <input id="password" type="password"
+                                        class="form-control @error('password') is-invalid @enderror" name="password"
+                                        required autocomplete="current-password" placeholder="Enter password">
+
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+
+                                </div>
                             </div>
-                        </div>
-                    </form>
+
+                            <div class="form-group row mt-4">
+                                <div class="col-sm-6">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" name="remember"
+                                            id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                        <label class="custom-control-label" for="customControlInline">Remember
+                                            me</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <a href="{{ route('password.request') }}" class="text-muted font-13"><i
+                                            class="mdi mdi-lock"></i> Forgot your password?</a>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-0 row">
+                                <div class="col-12 mt-2">
+                                    <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Log
+                                        In <i class="fas fa-sign-in-alt ml-1"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="mt-4 text-center">
+                        <p class="mb-0">© 2019-2020 Colombo Holidays <br> Developed by
+                            <a href="www.inovora.uk">Inovora Technologies</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9 p-0 h-100vh d-flex justify-content-center">
+            <div class="accountbg d-flex align-items-center">
+                <div class="account-title text-center text-white">
+                    <h4 class="mt-3">Welcome To <span class="text-primary">Colombo Holidays</span> </h4>
+                    <h1 class="">Let's Get Started</h1>
+                    <p class="font-14 mt-3">Sri Lanka Tourism makes no representations whatsoever about any other
+                        websites which you may access through this
+                        website.</p>
+                    <div class="border w-25 mx-auto border-primary"></div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-@endsection
+    <!-- End Log In page -->
+
+    @endsection

@@ -1,4 +1,5 @@
 @extends('layouts.header')
+@section('content')
 <div class="top-baner swiper-animate arrows">
     <div class="swiper-container main-slider" data-loop="1" data-speed="900" data-center="0" data-slides-per-view="1">
         <div class="swiper-wrapper">
@@ -478,6 +479,9 @@
     </div>
 </div>
 
+
+
+
 <div class="main-wraper padd-90">
     <div class="container">
         <div class="row">
@@ -815,7 +819,67 @@
     </div>
 </div>
 
-<div class="main-wraper">
+
+
+
+<!-- CONTRY-ITEM -->
+<div class="main-wraper padd-110">
+    <div class="container clearfix contry-wrapp">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3">
+                <div class="second-title style-3">
+                    <h4 class="subtitle color-dark-2-light">our tours</h4>
+                    <h2 class="color-dark-2">tours to any place in Sri Lanka</h2>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-9">
+                <div class="row">
+                    <div class="col-mob-12 col-xs-6 col-sm-4 col-md-2">
+                        <a class="contry-item">
+                            <img class="img-responsive" src="img/theme-1/country_1.png" alt="">
+                            <h5>North Central Province</h5>
+                        </a>
+                    </div>
+                    <div class="col-mob-12 col-xs-6 col-sm-4 col-md-2">
+                        <a class="contry-item">
+                            <img class="img-responsive" src="img/theme-1/country_2.png" alt="">
+                            <h5>Western Province</h5>
+                        </a>
+                    </div>
+                    <div class="col-mob-12 col-xs-6 col-sm-4 col-md-2">
+                        <div class="contry-item">
+                            <img class="img-responsive" src="img/theme-1/country_3.png" alt="">
+                            <h5>North Western Province</h5>
+                        </div>
+                    </div>
+                    <div class="col-mob-12 col-xs-6 col-sm-4 col-md-2">
+                        <a class="contry-item">
+                            <img class="img-responsive" src="img/theme-1/country_4.png" alt="">
+                            <h5>Northern Province</h5>
+                        </a>
+                    </div>
+                    <div class="col-mob-12 col-xs-6 col-sm-4 col-md-2">
+                        <a class="contry-item">
+                            <img class="img-responsive" src="img/theme-1/country_5.png" alt="">
+                            <h5>Southern Province</h5>
+                        </a>
+                    </div>
+                    <div class="col-mob-12 col-xs-6 col-sm-4 col-md-2">
+                        <a class="contry-item">
+                            <img class="img-responsive" src="img/theme-1/country_6.png" alt="">
+                            <h5>Eastern Province</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="main-wraper bg-grey-2">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -965,7 +1029,7 @@
     </div>
 </div>
 
-<div class="main-wraper">
+<div class="main-wraper ">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -1081,12 +1145,94 @@
     </div>
 </div>
 
+
+
+
+<!-- TESTIMONALS -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="second-title">
+        </div>
+    </div>
+</div>
+<div class="testimonials padd-90 mt-5">
+    <div class="arrows">
+        <div class="clip">
+            <div class="bg bg-bg-chrome" style="background-image:url(img/inner/bg_4.jpg)">
+            </div>
+        </div>
+        <div class="swiper-container testi-3" data-autoplay="0" data-loop="1" data-speed="1000" data-center="0"
+            data-slides-per-view="1" id="testi-slider-3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testi-wrap" style="">
+                        <div class="qq">
+                            <img src="img/rent_1.jpg" alt="">
+                        </div>
+                        <br>
+                        <div class="rate">
+                            <span class="fa fa-star color-yellow"></span>
+                            <span class="fa fa-star color-yellow"></span>
+                            <span class="fa fa-star color-yellow"></span>
+                            <span class="fa fa-star color-yellow"></span>
+                            <span class="fa fa-star color-yellow"></span>
+                        </div>
+                        <p style="color: white;">Duis posuere eget purus et euismod. Sed luctus
+                            ligula non est fringilla
+                            commodo.
+                            Nullam
+                            faucibus quam sit magna risus, fermentum at varius eu.</p>
+
+                        <h4><b>tomas linderman</b></h4>
+
+
+
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testi-wrap">
+                        <div class="qq">
+                            <img src="img/quote.png" alt="">
+                        </div>
+                        <p>Duis posuere eget purus et euismod. Sed luctus ligula non est fringilla commodo.
+                            Nullam
+                            faucibus quam sit magna risus, fermentum at varius eu.</p>
+                        <h4><b>tomas linderman</b></h4>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testi-wrap">
+                        <div class="qq">
+                            <img src="img/quote.png" alt="">
+                        </div>
+                        <p>Duis posuere eget purus et euismod. Sed luctus ligula non est fringilla commodo.
+                            Nullam
+                            faucibus quam sit magna risus, fermentum at varius eu.</p>
+                        <h4><b>tomas linderman</b></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination poin-style-1"></div>
+            <div class="arrow-wrapp arr-s-7">
+                <div class="cont-1170">
+                    <div class="swiper-arrow-left sw-arrow"><span class="fa fa-angle-left"></span></div>
+                    <div class="swiper-arrow-right sw-arrow"><span class="fa fa-angle-right"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 <div class="main-wraper padd-90">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="second-title">
-                    <h2>Most Popular Travel Countries</h2>
+                    <h2>Most Popular Places in Proviences</h2>
                     <p class="color-grey">Curabitur nunc erat, consequat in erat ut, congue bibendum nulla.</p>
                 </div>
             </div>
@@ -1099,9 +1245,10 @@
                         </div>
                     </div>
                     <div class="vertical-align">
-                        <h3>italy, europe</h3>
+                        <h3>Southern Provience</h3>
                         <p class="color-grey">Curabitur nunc erat, consequat in erat ut, congue bibendum nulla.
-                            Suspendisse id pharetra lacus, et hendrerit mi Praesent at vestibulum tortor. Praesent
+                            Suspendisse id pharetra lacus, et hendrerit mi Praesent at vestibulum tortor.
+                            Praesent
                             condimentum efficitur massa, nec congue sem dapibus sed. </p>
                         <h4>best cities</h4>
                         <div class="row">
@@ -1206,9 +1353,10 @@
                         </div>
                     </div>
                     <div class="vertical-align">
-                        <h3>france, europe</h3>
+                        <h3>Easton Provience</h3>
                         <p class="color-grey">Curabitur nunc erat, consequat in erat ut, congue bibendum nulla.
-                            Suspendisse id pharetra lacus, et hendrerit mi Praesent at vestibulum tortor. Praesent
+                            Suspendisse id pharetra lacus, et hendrerit mi Praesent at vestibulum tortor.
+                            Praesent
                             condimentum efficitur massa, nec congue sem dapibus sed. </p>
                         <h4>best cities</h4>
                         <div class="row">
@@ -1308,3 +1456,90 @@
         </div>
     </div>
 </div>
+
+
+<!-- S_NEWS-ENTRY -->
+<div class="main-wraper bg-grey-2 padd-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                <div class="second-title">
+                    <h4 class="subtitle color-dr-blue-2 underline">news</h4>
+                    <h2>latest news</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <div class="s_news-entry">
+                    <img class="s_news-img img-responsive" src="img/home_8/news_1.jpg" alt="">
+                    <h4 class="s_news-title"><a href="#">Lorem ipsum dolor</a></h4>
+                    <div class="tour-info-line clearfix">
+                        <div class="tour-info fl">
+                            <img src="img/calendar_icon_grey.png" alt="">
+                            <span class="font-style-2 color-dark-2">03/07/2015</span>
+                        </div>
+                        <div class="tour-info fl">
+                            <img src="img/people_icon_grey.png" alt="">
+                            <span class="font-style-2 color-dark-2">By Emma Stone</span>
+                        </div>
+                        <div class="tour-info fl">
+                            <img src="img/comment_icon_grey.png" alt="">
+                            <span class="font-style-2 color-dark-2">10 comments</span>
+                        </div>
+                    </div>
+                    <div class="s_news-text color-grey-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, commodo
+                        consequat.</div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="s_news-entry">
+                    <img class="s_news-img img-responsive" src="img/home_8/news_2.jpg" alt="">
+                    <h4 class="s_news-title"><a href="#">Lorem ipsum dolor</a></h4>
+                    <div class="tour-info-line clearfix">
+                        <div class="tour-info fl">
+                            <img src="img/calendar_icon_grey.png" alt="">
+                            <span class="font-style-2 color-dark-2">03/07/2015</span>
+                        </div>
+                        <div class="tour-info fl">
+                            <img src="img/people_icon_grey.png" alt="">
+                            <span class="font-style-2 color-dark-2">By Emma Stone</span>
+                        </div>
+                        <div class="tour-info fl">
+                            <img src="img/comment_icon_grey.png" alt="">
+                            <span class="font-style-2 color-dark-2">10 comments</span>
+                        </div>
+                    </div>
+                    <div class="s_news-text color-grey-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, commodo
+                        consequat.</div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="s_news-entry">
+                    <img class="s_news-img img-responsive" src="img/home_8/news_3.jpg" alt="">
+                    <h4 class="s_news-title"><a href="#">Lorem ipsum dolor</a></h4>
+                    <div class="tour-info-line clearfix">
+                        <div class="tour-info fl">
+                            <img src="img/calendar_icon_grey.png" alt="">
+                            <span class="font-style-2 color-dark-2">03/07/2015</span>
+                        </div>
+                        <div class="tour-info fl">
+                            <img src="img/people_icon_grey.png" alt="">
+                            <span class="font-style-2 color-dark-2">By Emma Stone</span>
+                        </div>
+                        <div class="tour-info fl">
+                            <img src="img/comment_icon_grey.png" alt="">
+                            <span class="font-style-2 color-dark-2">10 comments</span>
+                        </div>
+                    </div>
+                    <div class="s_news-text color-grey-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, commodo
+                        consequat.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
