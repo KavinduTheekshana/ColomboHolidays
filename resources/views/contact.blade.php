@@ -29,32 +29,17 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-6">
                                 <div class="input-style-1 type-2 color-2">
-                                    <input type="text" required="" placeholder="Enter your name">
+                                    <input type="text" required="" placeholder="Enter your First name">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <div class="input-style-1 type-2 color-2">
-                                    <input type="text" required="" placeholder="Enter your email">
+                                    <input type="text" required="" placeholder="Enter your Last name">
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-6">
+                            <div class="col-xs-12 col-sm-12">
                                 <div class="input-style-1 type-2 color-2">
-                                    <input type="text" required="" placeholder="Enter your name">
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="drop-wrap drop-wrap-s-3 color-2">
-                                    <div class="drop">
-                                        <b>Department</b>
-                                        <a href="#" class="drop-list"><i class="fa fa-angle-down"></i></a>
-                                        <span>
-                                            <a href="#">01 kids</a>
-                                            <a href="#">02 kids</a>
-                                            <a href="#">03 kids</a>
-                                            <a href="#">04 kids</a>
-                                            <a href="#">05 kids</a>
-                                        </span>
-                                    </div>
+                                    <input type="email" required="" placeholder="Enter your email">
                                 </div>
                             </div>
                             <div class="col-xs-12">
@@ -78,7 +63,7 @@
                         <div class="contact-line color-grey-3"><img src="img/phone_icon_2_dark.png" alt="">Phone: <a
                                 class="color-dark-2" href="tel:93123456789">+93 123 456 789</a></div>
                         <div class="contact-line color-grey-3"><img src="img/mail_icon_b_dark.png" alt="">Email us: <a
-                                class="color-dark-2 tt" href="#">let’s_travel@world.com</a></div>
+                                class="color-dark-2 tt" href="#">admin@colomboholidays.com</a></div>
                         <div class="contact-line color-grey-3"><img src="img/loc_icon_dark.png" alt="">Address: <span
                                 class="color-dark-2 tt">Aenean vulputate porttitor</span></div>
                     </div>
@@ -100,10 +85,10 @@
 
 <!-- MAP BLOCK -->
 <div class="map-block">
-    <div id="map-canvas" class="style-2" data-lat="33.664467" data-lng="-117.601586" data-zoom="10" data-style="2">
+    <div id="map-canvas" class="style-2" data-lat="6.9157" data-lng="79.8636" data-zoom="15" data-style="2">
     </div>
     <div class="addresses-block">
-        <a data-lat="33.664467" data-lng="-117.601586" data-string="Santa Monica Hotel"></a>
+        <a data-lat="6.9157" data-lng="79.8636" data-string="Colombo Municipal Council"></a>
     </div>
 </div>
 @endsection

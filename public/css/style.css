@@ -4861,7 +4861,7 @@ nav li.type-4 .dropmenu .fa-chevron-right {
 }
 
 .offers-block .vertical-top {
-    padding: 30px;
+    padding: 50px;
 }
 
 .offers-block .vertical-top .rate {
@@ -6036,12 +6036,13 @@ nav li.type-4 .dropmenu .fa-chevron-right {
 
 .testi-wrap p {
     color: rgba(255, 255, 255, 0.6);
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 
 .qq {
     position: absolute;
     width: 100%;
+    height: 100%;
     top: 0px;
     left: 0px;
 }
@@ -6051,6 +6052,7 @@ nav li.type-4 .dropmenu .fa-chevron-right {
     height: 100px;
     margin-top: -50px;
     border-radius: 100%;
+    overflow: hidden;
 }
 
 .qq:before {

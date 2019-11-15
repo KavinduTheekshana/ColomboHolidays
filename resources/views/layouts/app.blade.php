@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Amezia - Responsive Bootstrap 4 Admin Dashboard</title>
+    <title>Colombo Holidays | Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A premium admin dashboard template by themesbrand" name="description" />
     <meta content="Themesbrand" name="author" />
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="admin/images/favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
 
     <!-- App css -->
     <link rel="stylesheet" href="{{asset('admin/css/bootstrap.min.css')}}">

@@ -4,17 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ContactUsController extends Controller
+class NewsController extends Controller
 {
-   public function index()
+      public function index()
     {
-        $titleIdentity="Contact Us";
+        $titleIdentity="News";
         $activeStatusHome="";
-        $activeStatusContactUs="active";
+        $activeStatusContactUs="";
         $activeStatusGallary="";
         $activeStatusAboutUs="";
-        $activeStatusNews="";
-        return view('contact',['titleIdentity'=>$titleIdentity,'activeStatusHome'=>$activeStatusHome,
+        $activeStatusNews="active";
+        return view('news',['titleIdentity'=>$titleIdentity,'activeStatusHome'=>$activeStatusHome,
         'activeStatusContactUs'=>$activeStatusContactUs,'activeStatusGallary'=>$activeStatusGallary,
         'activeStatusAboutUs'=>$activeStatusAboutUs,'activeStatusNews'=>$activeStatusNews]);
     }

@@ -9,7 +9,7 @@
     <meta content="Themesbrand" name="author" />
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="admin/images/favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" href="{{asset('admin/plugins/morris/morris.css')}}">
     <link rel="stylesheet" href="{{asset('admin/plugins/chartist/css/chartist.min.css')}}">
@@ -27,6 +27,13 @@
     <!-- Dropzone css -->
     <link rel="stylesheet" href="{{asset('admin/plugins/dropzone/dist/dropzone.css')}}">
     <link rel="stylesheet" href="{{asset('admin/plugins/dropify/css/dropify.min.css')}}">
+
+
+    <!-- DataTables -->
+    <link href="assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <!-- Responsive datatable examples -->
+    <link href="assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -175,6 +182,15 @@
                     <a href="BeautifulTrips">
                         <i class="mdi mdi-plane-shield"></i><span>Beautiful Trips</span>
                     </a>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);"><i class="mdi mdi-star-circle"></i><span>Testimonials</span><span
+                            class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                        <li><a href="AddTestimonials">Add Testimonials</a></li>
+                        <li><a href="EditTestimonials">Edit Testimonials</a></li>
+                    </ul>
                 </li>
 
                 <li class="menu-title">Components</li>
@@ -368,6 +384,16 @@
     <script src="{{asset('admin/plugins/dropzone/dist/dropzone.js')}}"></script>
     <script src="{{asset('admin/plugins/dropify/js/dropify.min.js')}}"></script>
     <script src="{{asset('admin/pages/jquery.dropzone.init.js')}}"></script>
+
+    <!-- Responsive examples -->
+    <script src="assets/plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    <!-- Datatable init js -->
+    <script src="assets/pages/jquery.table-datatable.js"></script>
+
+
+
 
 
 </body>

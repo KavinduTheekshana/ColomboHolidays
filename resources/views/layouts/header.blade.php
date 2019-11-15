@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{asset('css/jquery-ui.structure.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/jquery-ui.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <title>Colombo Holidays | {{$titleIdentity}}</title>
 
@@ -55,12 +56,16 @@
                                 </li>
 
 
-                                <li class="type-1 ">
-                                    <a href="ContactUs">Gallery<span class="fa fa-angle-down"></span></a>
+                                <li class="type-1 {{$activeStatusGallary}}">
+                                    <a href="Gallery">Gallery<span class="fa fa-angle-down"></span></a>
                                 </li>
 
-                                <li class="type-1 ">
-                                    <a href="ContactUs">News<span class="fa fa-angle-down"></span></a>
+                                <li class="type-1 {{$activeStatusNews}}">
+                                    <a href="News">News<span class="fa fa-angle-down"></span></a>
+                                </li>
+
+                                <li class="type-1 {{$activeStatusAboutUs}}">
+                                    <a href="AboutUs">About Us<span class="fa fa-angle-down"></span></a>
                                 </li>
 
                                 <li class="type-1 {{$activeStatusContactUs}}">
@@ -167,7 +172,7 @@
                             <div class="contact-line color-grey-3"><i class="fa fa-envelope-o"></i><a
                                     href="mailto:">letstravel@mail.com</a></div>
                             <div class="contact-line color-grey-3"><i class="fa fa-globe"></i><a
-                                    href="#">let’s_travel@world.com</a></div>
+                                    href="#">admin@colomboholidays.com</a></div>
 
                         </div>
                     </div>
@@ -179,15 +184,14 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="copyright">
-                            <span>&copy; 2015 All rights reserved. LET'STRAVEL</span>
+                            <span>&copy; 2020 All rights reserved. Colombo Holidays</span>
                         </div>
                         <ul>
-                            <li><a class="link-aqua" href="#">Privacy Policy </a></li>
-                            <li><a class="link-aqua" href="#">About Us</a></li>
-                            <li><a class="link-aqua" href="#">Support </a></li>
-                            <li><a class="link-aqua" href="#">FAQ</a></li>
-                            <li><a class="link-aqua" href="#">Blog</a></li>
-                            <li><a class="link-aqua" href="#"> Forum</a></li>
+                            <li><a class="link-aqua" href="PrivacyPolicy">Privacy Policy </a></li>
+                            <li><a class="link-aqua" href="AboutUs">About Us</a></li>
+                            <li><a class="link-aqua" href="FAQ">FAQ</a></li>
+                            <li><a class="link-aqua" href="News">News</a></li>
+                            <li><a class="link-aqua" href="ContactUs"> Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -201,9 +205,11 @@
     <script src="js/jquery.viewportchecker.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/all.js"></script>
 
-    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;language=en"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMjwyKg-mHUw2I6fNvJm3NrlxF_hBYS_M&callback=initMap">
+    </script>
     <script src="js/map.js"></script>
 
 </html>

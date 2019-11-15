@@ -1029,6 +1029,11 @@
     </div>
 </div>
 
+
+
+
+
+
 <div class="main-wraper ">
     <div class="container">
         <div class="row">
@@ -1050,10 +1055,15 @@
                                 <div class="clip">
                                     <div class="bg bg-bg-chrome act"
                                         style="background-image:url(img/home_1/offers_slide_1.jpg)">
+
                                     </div>
+                                    <div class="price price-s-1" style="background-color: brown">save 20%</div>
                                 </div>
                                 <div class="tour-layer delay-1"></div>
-                                <div class="vertical-top">
+                                <div class="vertical-top" style="text-align: center">
+
+                                    <h3>greece</h3>
+
                                     <div class="rate">
                                         <span class="fa fa-star color-yellow"></span>
                                         <span class="fa fa-star color-yellow"></span>
@@ -1061,7 +1071,6 @@
                                         <span class="fa fa-star color-yellow"></span>
                                         <span class="fa fa-star color-yellow"></span>
                                     </div>
-                                    <h3>greece</h3>
                                 </div>
                                 <div class="vertical-bottom">
                                     <ul class="offers-info">
@@ -1155,63 +1164,41 @@
         </div>
     </div>
 </div>
+
+
 <div class="testimonials padd-90 mt-5">
     <div class="arrows">
         <div class="clip">
             <div class="bg bg-bg-chrome" style="background-image:url(img/inner/bg_4.jpg)">
             </div>
+
+
         </div>
         <div class="swiper-container testi-3" data-autoplay="0" data-loop="1" data-speed="1000" data-center="0"
             data-slides-per-view="1" id="testi-slider-3">
             <div class="swiper-wrapper">
+
+
+                @foreach ($testimonials as $item)
+
+
                 <div class="swiper-slide">
                     <div class="testi-wrap" style="">
                         <div class="qq">
-                            <img src="img/rent_1.jpg" alt="">
+                            <img src="{{$item->image}}" alt="">
                         </div>
                         <br>
                         <div class="rate">
-                            <span class="fa fa-star color-yellow"></span>
-                            <span class="fa fa-star color-yellow"></span>
-                            <span class="fa fa-star color-yellow"></span>
-                            <span class="fa fa-star color-yellow"></span>
-                            <span class="fa fa-star color-yellow"></span>
+                            @for ($i=0; $i<$item->stars; $i++)
+                                <span class="fa fa-star color-yellow"></span>
+                                @endfor
                         </div>
-                        <p style="color: white;">Duis posuere eget purus et euismod. Sed luctus
-                            ligula non est fringilla
-                            commodo.
-                            Nullam
-                            faucibus quam sit magna risus, fermentum at varius eu.</p>
-
-                        <h4><b>tomas linderman</b></h4>
-
-
-
-
+                        <p style="color: white;">{!!$item->ratings!!}</p>
+                        <h4><b>~{{$item->name}}~</b></h4>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="testi-wrap">
-                        <div class="qq">
-                            <img src="img/quote.png" alt="">
-                        </div>
-                        <p>Duis posuere eget purus et euismod. Sed luctus ligula non est fringilla commodo.
-                            Nullam
-                            faucibus quam sit magna risus, fermentum at varius eu.</p>
-                        <h4><b>tomas linderman</b></h4>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="testi-wrap">
-                        <div class="qq">
-                            <img src="img/quote.png" alt="">
-                        </div>
-                        <p>Duis posuere eget purus et euismod. Sed luctus ligula non est fringilla commodo.
-                            Nullam
-                            faucibus quam sit magna risus, fermentum at varius eu.</p>
-                        <h4><b>tomas linderman</b></h4>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
             <div class="pagination poin-style-1"></div>
             <div class="arrow-wrapp arr-s-7">
