@@ -30,10 +30,14 @@
 
 
     <!-- DataTables -->
-    <link href="assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{asset('admin/plugins/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('admin/plugins/datatables/buttons.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
     <!-- Responsive datatable examples -->
-    <link href="assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{asset('admin/plugins/datatables/responsive.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
+
+    <!-- Multipal Select -->
+    <link href="{{asset('admin/plugins/select2/select2.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('admin/plugins/tagsinput/jquery.tagsinput.css')}}" rel="stylesheet" />
 
 </head>
 
@@ -44,12 +48,12 @@
 
         <!-- LOGO -->
         <div class="topbar-left">
-            <a href="/Dashboard" class="logo">
+            <a href="{{ url('Dashboard') }}" class="logo">
                 <span>
-                    <img src="admin/images/logo-sm.png" alt="logo-small" class="logo-sm">
+                    <img src="{{asset('admin/images/logo-sm.png')}}" alt="logo-small" class="logo-sm">
                 </span>
                 <span>
-                    <img src="admin/images/logo.png" alt="logo-large" class="logo-lg">
+                    <img src="{{asset('admin/images/logo.png')}}" alt="logo-large" class="logo-lg">
                 </span>
             </a>
         </div>
@@ -175,21 +179,33 @@
                 <li class="menu-title">Main</li>
 
                 <li>
-                    <a href="Dashboard"><i class="mdi mdi-speedometer"></i><span>Dashboards</span></a>
-                </li>
-
-                <li>
-                    <a href="BeautifulTrips">
-                        <i class="mdi mdi-plane-shield"></i><span>Beautiful Trips</span>
-                    </a>
+                    <a href="{{ url('Dashboard') }}"><i class="mdi mdi-speedometer"></i><span>Dashboards</span></a>
                 </li>
 
                 <li>
                     <a href="javascript: void(0);"><i class="mdi mdi-star-circle"></i><span>Testimonials</span><span
                             class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                     <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href="AddTestimonials">Add Testimonials</a></li>
-                        <li><a href="EditTestimonials">Edit Testimonials</a></li>
+                        <li><a href="{{ url('AddTestimonials') }}">Add Testimonials</a></li>
+                        <li><a href="{{ url('EditTestimonials') }}">Edit Testimonials</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);"><i class="mdi mdi-image-multiple"></i><span>Gallery</span><span
+                            class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                        <li><a href="{{ url('AddGallery') }}">Add Gallery</a></li>
+                        <li><a href="{{ url('EditGallery') }}">Edit Gallery</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);"><i class="mdi mdi-newspaper"></i><span>News</span><span
+                            class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                        <li><a href="{{ url('AddNews') }}">Add News</a></li>
+                        <li><a href="{{ url('EditNews') }}">Edit News</a></li>
                     </ul>
                 </li>
 
@@ -386,11 +402,19 @@
     <script src="{{asset('admin/pages/jquery.dropzone.init.js')}}"></script>
 
     <!-- Responsive examples -->
-    <script src="assets/plugins/datatables/dataTables.responsive.min.js"></script>
-    <script src="assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
+    <script src="{{asset('admin/plugins/datatables/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('admin/plugins/datatables/responsive.bootstrap4.min.js')}}"></script>
 
     <!-- Datatable init js -->
-    <script src="assets/pages/jquery.table-datatable.js"></script>
+    <script src="{{asset('admin/pages/jquery.table-datatable.js')}}"></script>
+
+    <!-- Multipal Select -->
+    <script src="{{asset('admin/plugins/select2/select2.min.js')}}"></script>
+    <script src="{{asset('admin/plugins/tagsinput/jquery.tagsinput.min.js')}}"></script>
+    <script src="{{asset('admin/pages/jquery.form-advanced.init.js')}}"></script>
+
+
+
 
 
 

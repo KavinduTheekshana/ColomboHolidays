@@ -38,7 +38,7 @@ class TestimonialsController extends Controller
             $image->move($destinationPath, $profileImage);
             $testimonials->image = "$profileImage";
         }else {
-              $testimonials->image = 'asdccccccccas';
+            $testimonials->image = 'upload/Testimonials/default.jpg';
             }
         $testimonials->save();
         return Redirect::to("AddTestimonials")->withSuccess('Great! Your Review Added Sucessfully.');
@@ -56,7 +56,7 @@ class TestimonialsController extends Controller
     $task=Testimonials::find($id);
     $task->status='0';
     $task->save();
-    return redirect()->back();
+    return redirect()->back()->with('message', 'Testimonials Disabled Sucessfully !');
     }
 
 
@@ -65,11 +65,55 @@ class TestimonialsController extends Controller
     $task=Testimonials::find($id);
     $task->status='1';
     $task->save();
-    return redirect()->back();
+    return redirect()->back()->with('message', 'Testimonials Activated Sucessfully !');
     }
 
     public function DeleteTestimonials($id){
-    DB::table('testimonials')->where('id', $id)->delete();
-    return redirect()->back();
-  }
+        // $filename=DB::table('testimonials')->select('image')->where('id', $id)->get();
+        // return $filename;
+        // File::delete($filename);
+        DB::table('testimonials')->where('id', $id)->delete();
+        
+        return redirect()->back()->with('message', 'Testimonials Delete Sucessfully !');
+    }
+
+
+  public function updateview($id)
+    {
+        $titleIdentity="Update Testimonials";
+        $testimonials = DB::table('testimonials')->where('id',$id)->get();
+        return view('admin.updatetestimonials',['titleIdentity'=>$titleIdentity,'testimonials'=>$testimonials]);
+    }
+
+
+
+      public function UpdateTestimonials(Request $request)
+    {
+        request()->validate([
+            'name' => 'required|string|max:255',
+            'stars' => 'required|integer',
+            'image' => 'image|mimes:jpeg,png,jpg|max:1024',
+            'ratings' => 'required|string|max:255',
+        ]);
+        
+        $testimonials = new Testimonials();
+        $id = $request->input('id');
+        $testimonials->name = $request->input('name');
+        $testimonials->stars = $request->input('stars');
+        $testimonials->ratings = $request->input('ratings');
+
+            $data=array(
+              'name' => $testimonials->name,
+              'stars'=>$testimonials->stars,
+              'ratings'=>$testimonials->ratings,
+            );
+            Testimonials::where('id',$id)->update($data);
+
+        $testimonials->update();
+        return Redirect::to("EditTestimonials")->withSuccess('Great! Your Review Update Sucessfully.');
+    }
+
+
+
+
 }

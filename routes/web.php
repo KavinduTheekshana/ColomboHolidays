@@ -40,7 +40,23 @@ Route::get('/BeautifulTrips', 'adminController@BeautifulTrips')->name('Beautiful
 
 Route::get('/AddTestimonials', 'TestimonialsController@add')->name('AddTestimonials');
 Route::post('/SaveTestimonials', 'TestimonialsController@save')->name('SaveTestimonials');
+Route::post('/UpdateTestimonials', 'TestimonialsController@UpdateTestimonials')->name('UpdateTestimonials');
+Route::get('/UpdateTestimonialsView/{id}', 'TestimonialsController@updateview')->name('UpdateTestimonialsView');
 Route::get('/EditTestimonials', 'TestimonialsController@edit')->name('EditTestimonials');
 Route::get('/MarkAsDisableTestimonials/{id}', 'TestimonialsController@MarkAsDisableTestimonials');
 Route::get('/MarkAsActiveTestimonials/{id}', 'TestimonialsController@MarkAsActiveTestimonials');
 Route::get('/DeleteTestimonials/{id}', 'TestimonialsController@DeleteTestimonials');
+
+
+
+Route::get('/AddGallery', 'GallaryController@add')->name('AddGallery');
+Route::get('/EditGallery', 'GallaryController@edit')->name('EditGallery');
+Route::post('/SaveGallery', 'GallaryController@save')->name('SaveGallery');
+Route::get('/MarkAsDisableGallery/{id}', 'GallaryController@MarkAsDisableGallery');
+Route::get('/MarkAsActiveGallery/{id}', 'GallaryController@MarkAsActiveGallery');
+Route::get('/DeleteGallery/{id}', 'GallaryController@DeleteGallery');
+
+
+
+
+Route::get('/AddNews', 'NewsController@add')->name('AddNews');

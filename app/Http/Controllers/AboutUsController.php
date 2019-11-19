@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class AboutUsController extends Controller
 {
@@ -14,8 +15,13 @@ class AboutUsController extends Controller
         $activeStatusGallary="";
         $activeStatusAboutUs="active";
         $activeStatusNews="";
+
+        $testimonials = DB::table('testimonials')->where('status','1')->get();
+
+
         return view('aboutus',['titleIdentity'=>$titleIdentity,'activeStatusHome'=>$activeStatusHome,
         'activeStatusContactUs'=>$activeStatusContactUs,'activeStatusGallary'=>$activeStatusGallary,
-        'activeStatusAboutUs'=>$activeStatusAboutUs,'activeStatusNews'=>$activeStatusNews]);
+        'activeStatusAboutUs'=>$activeStatusAboutUs,'activeStatusNews'=>$activeStatusNews,
+        'testimonials'=>$testimonials]);
     }
 }
